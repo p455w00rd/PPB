@@ -46,6 +46,14 @@
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
+                        <li><a href="{{ route('hilang') }}">Barang Hilang</a></li>
+                        <li><a href="{{ route('login') }}">Barang Ditemukan</a></li>
+                        @if (Auth::user()->is_admin == 1)
+                        <li><a href="{{ route('user') }}">List User</a></li>
+
+                        @else
+                        @endif
+
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
