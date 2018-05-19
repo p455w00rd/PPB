@@ -20,4 +20,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('barang/hilang', 'BarangController@hilangindex')->name('hilang');
-Route::get('user', 'UserController@index')->name('user');
+
+Route::resource('user','UserController');
+//Route::get('user', 'UserController@index')->name('user');
