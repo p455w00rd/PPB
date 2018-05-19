@@ -17,6 +17,8 @@ class BarangController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    //hilang
     public function hilangindex()
     {
         $barang = Barang::where('tipe','0')->get();
@@ -30,41 +32,43 @@ class BarangController extends Controller
 
     	return redirect()->route('hilang');
     }
-    // public function hilangupdate($id Request $request)
-    // {
-    //     return view('welcome');
-    // }
-    // public function hilangdelete()
-    // {
-    //     return view('welcome');
-    // }
-    // public function hilang($id)
-    // {
-    //     return view('welcome');
-    // }
-    // public function temuindex()
-    // {
-    //     $barang = Barang::where('tipe','0')->get();
+     public function hilangupdate($id, Request $request)
+     {
+         return view('welcome');
+     }
+     public function hilangdelete()
+     {
+         return view('welcome');
+     }
+     public function hilang($id)
+     {
+         return view('welcome');
+     }
 
-    // 	return view('barang.hilang.index',['barang' => $barang]);
-    // }
-    // public function temucreate(Request $request)
-    // {
-    //     $barang = $request->all();
-    //     Barang::create($barang);
+     //ditemukan
+     public function temuindex()
+     {
+         $barang = Barang::where('tipe','1')->get();
 
-    // 	return redirect()->route('hilang');
-    // }
-    // public function temuupdate($id Request $request)
-    // {
-    //     return view('welcome');
-    // }
-    // public function temudelete()
-    // {
-    //     return view('welcome');
-    // }
-    // public function temu($id)
-    // {
-    //     return view('welcome');
-    // }
+     	return view('barang.ditemukan.index',['barang' => $barang]);
+     }
+     public function temucreate(Request $request)
+     {
+         $barang = $request->all();
+         Barang::create($barang);
+
+     	return redirect()->route('hilang');
+     }
+     public function temuupdate($id, Request $request)
+     {
+         return view('welcome');
+     }
+     public function temudelete()
+     {
+         return view('welcome');
+     }
+     public function temu($id)
+     {
+         return view('welcome');
+     }
 }

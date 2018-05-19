@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Barang extends Migration
+class PenemuTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class Barang extends Migration
      */
     public function up()
     {
-        Schema::create('barangs', function (Blueprint $table) {
+        Schema::create('penemu', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
-            $table->string('lokasi');
+            $table->string('telepone');
+            $table->string('alamat');
             $table->date('tanggal');
-            $table->longText('deskripsi');
-            $table->boolean('tipe');
-            $table->boolean('ditemukan');
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ class Barang extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('barangs');
+        //
     }
 }

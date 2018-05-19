@@ -19,7 +19,15 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('barang/hilang', 'BarangController@hilangindex')->name('hilang');
+
+//hilang
+Route::get('barang/hilang', 'BarangController@hilangindex')->name('hilang.index');
+
+
+//ditemukan
+Route::get('barang/ditemukan', 'BarangController@temuindex')->name('temu.index');
+
+
 
 Route::resource('user','UserController');
 //Route::get('user', 'UserController@index')->name('user');

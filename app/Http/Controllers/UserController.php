@@ -18,6 +18,7 @@ class UserController extends Controller
     {
         $user = User::all();
         return view('user.index',['user' => $user]);
+        return response()->json($article);
     }
 
     /**
