@@ -36,7 +36,7 @@
                                 <td>
                                     <a href="{{route('temu.edit',$barang->id)}}" class="btn btn-warning">Ubah</a>
                                     <a href="{{route('temu.show',$barang->id)}}" class="btn btn-success">Detail</a>
-                                    <a href="" class="btn btn-info">ditemukan</a>
+                                    <a href="" class="btn btn-info">Kepemilikan</a>
                                     <a href="{{ route('temu.delete',$barang->id) }}" class="btn-danger btn"
                                        onclick="event.preventDefault();
                                                      document.getElementById('delete').submit();">

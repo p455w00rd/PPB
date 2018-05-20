@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\User;
-use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
 
-
-class UserController extends Controller
+class ApiUserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = User::all();
-        return view('user.index',['user' => $user]);
-        return response()->json($article);
+        $user=User::all();
+        return response()->json($user);
     }
 
     /**
@@ -28,7 +25,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('user.create');
+        //
     }
 
     /**
@@ -39,29 +36,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-        ]);
-
-        if ($validator->fails()) {
-
-            return redirect(route('user.create'))
-                ->withErrors($validator)
-                ->withInput();
-
-        }else {
-            $user = new User();
-
-            $input = $request->all();
-
-            $user->fill($input)->save();
-
-            return redirect()->route('user.index');
-        }
-
+        //
     }
 
     /**
@@ -83,8 +58,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user=User::findOrFail($id);
-        return view('user.update',['user'=>$user,'id'=>$id]);
+        //
     }
 
     /**
@@ -96,7 +70,6 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-
         if ($request->input('password') != null) {
             $user = User::find($id);
             $user->name = $request->input('name');
@@ -111,9 +84,7 @@ class UserController extends Controller
 //            dd($user);
             $user->save();
         }
-
-
-        return redirect()->route('user.index');
+        return response()->json($user);
     }
 
     /**
@@ -124,8 +95,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $user=User::findOrFail($id);
-        $user->delete();
-        return redirect()->route('user.index');
+        //
     }
 }

@@ -23,7 +23,9 @@ class BarangController extends Controller
     //hilang
     public function hilangindex()
     {
-        $barang = Barang::where('tipe','0')->get();
+        $barang = Barang::where('tipe','0')
+            ->where('ditemukan','o')
+            ->get();
 
     	return view('barang.hilang.index',['barang' => $barang]);
     }
@@ -73,7 +75,9 @@ class BarangController extends Controller
      //ditemukan
     public function temuindex()
     {
-        $barang = Barang::where('tipe','1')->get();
+        $barang = Barang::where('tipe','1')
+            ->where('ditemukan','o')
+            ->get();
 
         return view('barang.temu.index',['barang' => $barang]);
     }
