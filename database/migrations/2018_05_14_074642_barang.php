@@ -19,8 +19,8 @@ class Barang extends Migration
             $table->string('lokasi');
             $table->date('tanggal');
             $table->longText('deskripsi');
-            $table->boolean('tipe');
-            $table->boolean('ditemukan');
+            $table->boolean('tipe')->nullable();
+            $table->boolean('ditemukan')->nullable();
             $table->timestamps();
         });
     }

@@ -8,5 +8,5 @@ class Barang extends Model
 {
     protected $table = 'barangs';
 
-    protected $fillable = ['nama','lokasi','tanggal','deskripsi','tipe'];
+    protected $fillable = ['nama','lokasi','tanggal','deskripsi','tipe','ditemukan'];
 }

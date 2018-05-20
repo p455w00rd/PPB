@@ -22,6 +22,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //hilang
 Route::get('barang/hilang', 'BarangController@hilangindex')->name('hilang.index');
+Route::get('barang/hilang/create', 'BarangController@hilangcreate')->name('hilang.create');
+Route::post('barang/hilang', 'BarangController@hilangstore')->name('hilang.store');
+Route::get('barang/hilang/{id}', 'BarangController@hilang')->name('hilang.show');
+Route::post('barang/hilang/{id}', 'BarangController@hilangupdate')->name('hilang.update');
+Route::get('barang/hilang/{id}/edit', 'BarangController@hilangedit')->name('hilang.edit');
+Route::post('barang/hilang/{id}/delete', 'BarangController@hilangdelete')->name('hilang.delete');
+
 
 
 //ditemukan

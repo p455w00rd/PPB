@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class PenemuTable extends Migration
+class PemilikTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class PenemuTable extends Migration
      */
     public function up()
     {
-        Schema::create('penemu', function (Blueprint $table) {
+        Schema::create('pemilik', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
             $table->string('telepone');
@@ -30,6 +30,6 @@ class PenemuTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('pemilik');
     }
 }
