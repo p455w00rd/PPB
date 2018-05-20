@@ -32,7 +32,13 @@ Route::post('barang/hilang/{id}/delete', 'BarangController@hilangdelete')->name(
 
 
 //ditemukan
-Route::get('barang/ditemukan', 'BarangController@temuindex')->name('temu.index');
+Route::get('barang/temu', 'BarangController@temuindex')->name('temu.index');
+Route::get('barang/temu/create', 'BarangController@temucreate')->name('temu.create');
+Route::post('barang/temu', 'BarangController@temustore')->name('temu.store');
+Route::get('barang/temu/{id}', 'BarangController@temu')->name('temu.show');
+Route::post('barang/temu/{id}', 'BarangController@temuupdate')->name('temu.update');
+Route::get('barang/temu/{id}/edit', 'BarangController@temuedit')->name('temu.edit');
+Route::post('barang/temu/{id}/delete', 'BarangController@temudelete')->name('temu.delete');
 
 
 

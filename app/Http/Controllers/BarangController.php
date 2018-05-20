@@ -73,7 +73,7 @@ class BarangController extends Controller
      //ditemukan
     public function temuindex()
     {
-        $barang = Barang::where('tipe','0')->get();
+        $barang = Barang::where('tipe','1')->get();
 
         return view('barang.temu.index',['barang' => $barang]);
     }

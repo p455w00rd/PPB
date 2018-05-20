@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Tambah User</div>
+                    <div class="panel-heading">Barang Hilang</div>
 
                     <div class="panel-body">
                         <form class="form-horizontal" method="POST">
@@ -21,7 +21,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="email" class="col-md-4 control-label">Lokasi Ditemukan</label>
+                                <label for="email" class="col-md-4 control-label">Lokasi Kehilangan</label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="text" readonly class="form-control" name="lokasi" value="{{$barang->lokasi}}" required>
@@ -29,7 +29,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="email" class="col-md-4 control-label">Tanggal Ditemukan</label>
+                                <label for="email" class="col-md-4 control-label">Tanggal Kehilangan</label>
 
                                 <div class="col-md-6">
                                     <input type="text" name="tanggal" readonly required class="form-control" value="{{$barang->tanggal}}" id="datepicker">

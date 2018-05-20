@@ -21,7 +21,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="email" class="col-md-4 control-label">Lokasi Ditemukan</label>
+                                <label for="email" class="col-md-4 control-label">Lokasi Kehilangan</label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="text" class="form-control" name="lokasi" value="" required>
@@ -29,7 +29,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="email" class="col-md-4 control-label">Tanggal Ditemukan</label>
+                                <label for="email" class="col-md-4 control-label">Tanggal Kehilangan</label>
 
                                 <div class="col-md-6">
                                     <input type="text" name="tanggal" required class="form-control" id="datepicker">
